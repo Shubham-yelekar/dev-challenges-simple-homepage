@@ -176,11 +176,13 @@ gap: 24px;
 }
 
 .mobile-hamburger {
-    border: 1px solid red;
+    border: none;
+    background-color: #FFFFFF;
     width: 36px;
     height: 36px;
     position: absolute;
     right: 24px;
+    outline: 1px solid red;
 }
 
 .bar {
@@ -190,19 +192,32 @@ gap: 24px;
     position: absolute;
 }
 
-.bar-top {
+.bar:nth-child(1) {
     top: 10px;
 }
 
 
-.bar-mid {
+.bar:nth-child(2) {
 
 }
 
-.bar-bot {
+.bar:nth-child(3){
     bottom: 8px;
 }
 
+.bar.open:nth-child(1) {
+    transform: rotate(45deg);
+    top: 18px;
+}
+
+.bar.open:nth-child(2) {
+    display: none;
+}
+
+.bar.open:nth-child(3) {
+    transform: rotate(135deg);
+    bottom: 16px;
+}
 
 
 @media screen and (max-width:1024px) {
